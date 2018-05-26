@@ -1,0 +1,57 @@
+@import "./button";
+@import "./input-number";
+@import "./select";
+@import "./pagination";
+@import "./table";
+@import "./tag";
+@import "./breadcrumb";
+@import "./modal";
+@import "./input";
+@import "./datePicker";
+@import "./tooltip";
+@import "./switch";
+@import "./treeSelect";
+@import "./tree";
+@import "./notification";
+
+:global [data-reactroot] {
+
+  .ant-input-number {
+    width: 100%;
+  }
+
+  .ant-calendar-picker {
+    width: 100%;
+  }
+
+  .ant-time-picker {
+    width: 100%;
+  }
+
+  .ant-input {
+    font-size:12px;
+    &-lg {
+      font-size:14px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  textarea {
+    &::-webkit-input-placeholder {
+      color: @fontColorTips;
+    }
+  }
+
+  input {
+    &::-webkit-input-placeholder {
+      color: @fontColorTips;
+    }
+  }
+
+}

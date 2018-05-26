@@ -1,0 +1,38 @@
+:global {
+  .FormItem {
+    min-height: 40px;
+    line-height: 40px;
+    padding: 0 50px;
+    margin-bottom: 25px;
+    &.FormItem-small {
+      margin-bottom: 5px;
+      padding: 0 5px;
+    }
+  }
+
+  .FormItem-label {
+    float: left;
+    color: @fontColorSecondary;
+  }
+
+  .FormItem-required:after {
+    content: '';
+    margin-right: 5px;
+    background: #FB6868;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    top: -6px;
+    margin-left: 4px;
+  }
+
+  .FormItem-content {
+    margin-left: 120px;
+  }
+
+  .FormItem-content {
+    color: @fontColorPrimary;
+  }
+}

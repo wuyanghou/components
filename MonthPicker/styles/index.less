@@ -1,0 +1,98 @@
+@prefixClass: MonthPicker;
+
+:global {
+  .@{prefixClass} {
+    outline: none;
+    user-select: none;
+
+    background-color: #fff;
+    border-radius: @borderRadius;
+    border: 1px solid @inputBorderColor;
+
+
+    height: @inputHeight;
+    line-height: @inputHeight;
+    position: relative;
+
+    &-open,
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: @primaryColor;
+    }
+
+    &-input {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      left: 0;
+      .Input {
+        height: 100%;
+      }
+      input {
+        display: block;
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: 0;
+      }
+    }
+
+    &-clear {
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      right: 8px;
+      opacity: 0;
+      transition: opacity .2s ease;
+      pointer-events: none;
+
+      &-show {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      top: 10px;
+      right: 8px;
+      pointer-events: none;
+    }
+
+    &-disabled {
+      color: @fontColorTips;
+      cursor: not-allowed;
+      color: @fontColorTips;
+      background-color: @basicColor;
+
+      &:hover, &:active, &:focus {
+        border-color: @inputBorderColor;
+      }
+    }
+
+    &-small {
+      height: @inputHeightSm;
+      line-height: @inputHeightSm;
+      font-size: @inputFontSizeSm;
+      .@{prefixClass}-clear,
+      .@{prefixClass}-icon {
+        top: 7px;
+      }
+    }
+
+    &-xSmall {
+      height: @inputHeightXs;
+      line-height: @inputHeightXs;
+      font-size: @inputFontSizeXs;
+      .@{prefixClass}-clear,
+      .@{prefixClass}-icon {
+        top: 5px;
+      }
+    }
+
+  }
+}
+
+

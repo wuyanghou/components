@@ -1,0 +1,60 @@
+:global {
+
+  .Modal {
+    .ant-modal-content {
+      padding: 10px 30px;
+    }
+    .ant-modal-header {
+      padding: 0;
+    }
+    .ant-modal-title {
+      line-height: 36px;
+    }
+    .ant-modal-close-x {
+      width: 54px;
+      height: 54px;
+      line-height: 54px;
+    }
+    .ant-modal-body {
+      position: relative;
+      padding: 20px;
+    }
+    .ant-modal-footer {
+      padding: 20px;
+    }
+
+    .ant-modal-footer button + button {
+      margin-left: 20px;
+    }
+
+    &.Modal-noLine {
+      .ant-modal-header {
+        border-bottom: none;
+      }
+      .ant-modal-body {
+        padding: 0;
+      }
+      .ant-modal-footer {
+        border-top: none;
+        padding: 30px 0 20px;
+      }
+    }
+
+    &.Modal-fixedLoading {
+      .Loading .Loading-inner {
+        position: fixed;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .Modal-error {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+  }
+}

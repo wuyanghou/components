@@ -1,0 +1,87 @@
+
+.button-color(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  // a inside Button which only work in Chrome
+  // http://stackoverflow.com/a/17253457
+  > a:only-child {
+    color: currentColor;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: transparent;
+    }
+  }
+}
+
+.button-disabled(@color; @bg; @border) {
+  &.disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      .button-color(@color; @bg; @border);
+    }
+  }
+}
+
+.button-variant-primary(@color; @background) {
+  .button-color(@color; @background; @background);
+
+  &:focus {
+    .button-color(@color; @background; @background);
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    .button-color(@color; @primaryColorActive; @primaryColorActive);
+  }
+
+ .button-disabled(@color; @primaryColorDisabled; transparent);
+}
+
+.button-variant-other(@color; @background; @border) {
+  .button-color(@color; @background; @border);
+
+  &:focus {
+    .button-color(@color; @background; @border);
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    .button-color(@color; @basicColorActive; @border);
+  }
+
+  .button-disabled(@primaryColorDisabled; @background; @border);
+}
+
+.btn-primary() {
+  .button-variant-primary(#fff; @primaryColor);
+}
+
+.btn-default() {
+  .button-variant-other(@primaryColor; #fff; @inputBorderColor);
+}
+
+:global [data-reactroot] {
+  .ant-btn {
+    .btn-default;
+    &-primary {
+      .btn-primary;
+    }
+    font-size: @fontSizeSm;
+
+    &.ant-btn-lg {
+      font-size: @fontSize;
+    }
+  }
+}

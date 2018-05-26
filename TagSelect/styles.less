@@ -1,0 +1,118 @@
+
+
+@selectPrefixCls: TagSelect;
+
+:global {
+  .@{selectPrefixCls} {
+    outline: none;
+    user-select: none;
+
+    background-color: #fff;
+    border-radius: @borderRadius;
+    border: 1px solid @inputBorderColor;
+
+
+    min-height: @inputHeight;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+
+    &-open,
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: @primaryColor;
+    }
+
+    &-selected-value {
+      overflow: hidden;
+      &-item {
+        &.ant-tag {
+          margin: 0 5px 5px 0;
+        }
+      }
+    }
+
+    &-content {
+      margin-left: 5px;
+      margin-right: 20px;
+      margin-top: 5px;
+    }
+
+    &-placeholder {
+      color: @fontColorTips;
+      pointer-events: none;
+      padding: 5px 0 0 5px;
+    }
+
+    &-clear {
+      position: absolute;
+      z-index: 1;
+      color: @primaryColor;
+      top: 10px;
+      right: 8px;
+      font-size: 12px;
+      background: #ffffff;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity .2s ease;
+      pointer-events: none;
+      line-height: 1;
+
+      &:after {
+        font-family: 'anticon';
+        content: '\E62E';
+      }
+
+      &-show {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 16px;
+      right: 8px;
+      line-height: 1;
+      margin-top: -6px;
+      color: @fontColorTips;
+      font-size: 12px;
+      transform: scale(0.667) rotate(0deg);
+      transition: transform 0.2s ease;
+
+      &:before {
+        font-family: 'anticon';
+        content: '\E606';
+      }
+    }
+
+    &-disabled {
+      color: @fontColorTips;
+      cursor: not-allowed;
+      color: @fontColorTips;
+      background-color: @basicColor;
+
+      &:hover, &:active, &:focus {
+        border-color: @inputBorderColor;
+      }
+
+      .@{selectPrefixCls}-selected-value-item {
+        &.ant-tag {
+          background: @basicColorBorder;
+          cursor: not-allowed;
+        }
+      }
+
+    }
+
+    &-open {
+      .@{selectPrefixCls}-arrow {
+        transform: scale(0.667) rotate(180deg);
+      }
+    }
+
+  }
+}

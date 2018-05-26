@@ -1,0 +1,15 @@
+
+:global [data-reactroot] {
+  .ant-switch-disabled {
+    background: @basicColorActive;
+    &:after {
+      background: @inputBorderColor;
+    }
+  }
+  .ant-switch-disabled.ant-switch-checked {
+    background: @primaryColorDisabled;
+    &:after {
+      background: #fff;
+    }
+  }
+}

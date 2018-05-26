@@ -1,0 +1,106 @@
+:global {
+  .Checkbox,
+  .CheckboxGroup {
+    .ant-checkbox {
+      vertical-align: sub;
+    }
+    .ant-checkbox-wrapper {
+      height: @inputHeight;
+      line-height: @inputHeight;
+    }
+  
+    .ant-checkbox-input:focus + .ant-checkbox-inner {
+      border-color: @inputBorderColor;
+    }
+  
+    .ant-checkbox-checked {
+      .ant-checkbox-input:focus + .ant-checkbox-inner {
+        border-color: @primaryColor;
+      }
+    }
+  
+    .ant-checkbox-wrapper:hover {
+      .ant-checkbox-input:focus + .ant-checkbox-inner {
+        border-color: @primaryColor;
+      }
+      .ant-checkbox:not(.ant-checkbox-disabled) ~ span {
+        color: @primaryColor;
+      }
+    }
+  
+    .ant-checkbox.ant-checkbox-checked ~ span {
+      color: @primaryColor;
+    }
+  
+    .ant-checkbox.ant-checkbox-checked.ant-checkbox-disabled + span {
+      color: @primaryColorDisabled;
+    }
+  
+    .ant-tree-checkbox-inner:after,
+    .ant-checkbox-inner:after {
+      top: 0px;
+    }
+  
+    .ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner:after,
+    .ant-tree-checkbox-checked .ant-tree-checkbox-inner:after,
+    .ant-checkbox-checked .ant-checkbox-inner:after {
+      border-width: 1px;
+    }
+    .ant-checkbox-disabled .ant-checkbox-inner {
+      border-color: @inputBorderColor !important;
+      background-color: @basicColor;
+    }
+    .ant-checkbox-checked.ant-checkbox-disabled .ant-checkbox-inner {
+      border-color: transparent !important;
+      background-color: @primaryColorDisabled;
+    }
+    .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner:after {
+      border-color: #ffffff;
+    }
+    .ant-checkbox-indeterminate .ant-checkbox-inner:after {
+      left: 2px;
+      width: 8px;
+      height: 6px;
+      border-right: none;
+      border-width: 1px;
+    }
+  }
+
+  .Checkbox {
+    display: inline-block;
+    &.Checkbox-default {
+      .ant-checkbox~span {
+        position: relative;
+        top: 1px;
+      }
+    }
+    &.Checkbox-small,
+    &.Checkbox-xSmall {
+      .ant-checkbox-wrapper {
+        height: @inputHeightSm;
+        line-height: @inputHeightSm;
+        font-size: @fontSizeSm;
+      }
+    }
+  }
+
+  .CheckboxGroup {
+    &.CheckboxGroup-default {
+      .ant-checkbox~span {
+        position: relative;
+        top: 1px;
+      }
+    }
+    &.CheckboxGroup-small,
+    &.CheckboxGroup-xSmall {
+      .ant-checkbox-wrapper {
+        height: @inputHeightSm;
+        line-height: @inputHeightSm;
+        font-size: @fontSizeSm;
+      }
+    }
+  }
+  .ant-checkbox-group-item {
+    margin-right: 20px;
+  }
+}

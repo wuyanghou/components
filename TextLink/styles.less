@@ -1,0 +1,28 @@
+:global {
+  .TextLink {
+    display: inline-block;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    color: @primaryColor;
+    cursor: pointer;
+    line-height: 1;
+    &.TextLink-secondary {
+      color: @fontColor;
+      &:hover {
+        color: @primaryColor;
+      }
+    }
+    &:hover {
+      color: @primaryColor;
+      border-color: @primaryColor;
+    }
+    &.TextLink-disabled {
+      color: @primaryColorDisabled;
+      cursor: not-allowed;
+      border-color: transparent;
+      &.TextLink-secondary {
+        color: @fontColorTips;
+      }
+    }
+  }
+}

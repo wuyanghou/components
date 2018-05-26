@@ -1,0 +1,47 @@
+:global {
+  .SortButton {
+    display: inline-block;
+    cursor: pointer;
+    &-content {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3px;
+    }
+    &-arrows {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .Icon.SortButton-arrow-up {
+      display: block;
+      position: relative;
+      color: @fontColorTips;
+      bottom: -2px;
+    }
+    .Icon.SortButton-arrow-down {
+      display: block;
+      position: relative;
+      color: @fontColorTips;
+      top: -2px;
+    }
+    &:hover {
+      color: @primaryColor;
+    }
+    &.SortButton-asc {
+      color: @primaryColor;
+      .Icon.SortButton-arrow-up {
+        color: @primaryColor;
+      }
+    }
+    &.SortButton-desc {
+      color: @primaryColor;
+      .Icon.SortButton-arrow-down {
+        color: @primaryColor;
+      }
+    }
+  }
+  .SortButtonGroup {
+    .SortButton + .SortButton {
+      margin-left: 20px;
+    }
+  }
+}

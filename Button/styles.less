@@ -1,0 +1,26 @@
+:global {
+  .ant-btn {
+    letter-spacing: 1.3px;
+    .Icon.Button-icon {
+      margin-right: 5px;
+      position: relative;
+      top: 1px;
+      color: @primaryColor;
+    }
+    &.ant-btn-primary {
+      .Icon.Button-icon {
+        color: #fff;
+      }
+    }
+    &[disabled] {
+      .Icon.Button-icon {
+        color: @primaryColorDisabled;
+      }
+      &.ant-btn-primary {
+        .Icon.Button-icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

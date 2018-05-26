@@ -1,0 +1,56 @@
+:global [data-reactroot] {
+  .ant-confirm-warning .ant-confirm-body > .anticon,
+  .ant-confirm-confirm .ant-confirm-body > .anticon,
+  .ant-confirm-success .ant-confirm-body > .anticon {
+    display: block;
+  }
+  .ant-confirm-body > .anticon {
+    font-size: 42px;
+    float: none;
+  }
+  .ant-confirm-body .ant-confirm-content {
+    font-size: @fontSizeHeadingSm;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+    white-space: normal;
+  }
+  .ant-confirm .ant-modal-body {
+    padding: 20px 25px;
+  }
+  .ant-confirm .ant-confirm-btns {
+    margin-top: 30px;
+  }
+  .ant-confirm .ant-confirm-btns button:first-child {
+    float: right;
+  }
+  .ant-confirm .ant-confirm-btns button + button {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .ant-modal.ant-confirm.ant-confirm-confirm,
+  .ant-modal.ant-confirm.ant-confirm-warning {
+    width: 380px !important;
+  }
+  .ant-modal-wrap {
+    text-align: center;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 0;
+    }
+    .ant-modal {
+      display: inline-block;
+      vertical-align: middle;
+      top: 0;
+      text-align: left;
+      padding-top: 10px;
+    }
+  }
+  .ant-confirm.ant-confirm-confirm .ant-modal-close, 
+  .ant-confirm.ant-confirm-confirm .ant-modal-header {
+    display: block;
+  }
+}

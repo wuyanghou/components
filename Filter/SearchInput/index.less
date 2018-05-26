@@ -1,0 +1,19 @@
+.inputWrap {
+  display: flex;
+  .searchBtn {
+    border-radius: 0 @borderRadius @borderRadius 0;
+    margin-right: 20px;
+  }
+  input {
+    outline: none;
+    width: 100%;
+    height: @inputHeight;
+    border: 1px solid #EDEDED;
+    padding-left: 10px;
+    border-radius: 6px 0 0 6px;
+    font-size: @fontSize;
+    &::-webkit-input-placeholder {
+      color: @fontColorTips;
+    }
+  }
+}

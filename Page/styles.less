@@ -1,0 +1,127 @@
+@import "../theme/less/mixins/index";
+
+:global {
+
+  .Page {
+    height: 100%;
+    & > .Loading {
+      right: 32px;
+    }
+  }
+
+  .Page-scroller {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0 10px 0 20px;
+    padding-right: 2px;
+    .scrollbar_lg;
+  }
+
+  .Page-content{
+    min-height: calc(~'100% - 10px');
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+
+  .Page-content-fit{
+    height: calc(~'100% - 10px');
+    min-height: 300px;
+  }
+
+  .Page-background {
+    .card_panel;
+  }
+
+  .Page-body {
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .Page-footer {
+    padding: 20px 0 10px;
+    height: 62px;
+    overflow: hidden;
+  }
+
+  .Page-footer-fixed, .Page-footer-fixed-bg {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 15px 41px 15px 40px;
+    height: 62px;
+    overflow: hidden;
+  }
+
+  .Page-footer-fixed-bg {
+    background: rgba(39, 50, 56, 0.14);
+    pointer-events: none;
+  }
+
+  .Page-btn-wrap{
+    float: right;
+  }
+
+  .Page-btn-wrap + .Page-btn-wrap {
+    margin-right: 20px;
+  }
+
+  .Page-header{
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 5px;
+  }
+
+  .Page-backBtn {
+    float: left;
+    position: relative;
+    width: 18px;
+    height: 50px;
+    .Page-back-icon.DotButton {
+      position: absolute;
+      top: 16px;
+    }
+  }
+
+  .Page-title{
+    float: left;
+  }
+
+  .Page-title-default{
+    position: relative;
+    height: 100%;
+    font-size: 14px;
+    padding-left: 8px;
+  }
+
+  .Page-iconTitle {
+    padding-left: 20px;
+    :global {
+      .ant-breadcrumb > span:last-child {
+        font-size: @fontSizeHeadingSm;
+        color: @fontColorPrimary;
+      }
+    }
+  }
+
+  .Page-iconTitle:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: -4px;
+    background: #96E6A1;
+    background-image: linear-gradient(-180deg, #B6B5FC 0%, #6866FF 97%);
+  }
+
+  .Page-headerToolBar {
+    float: right;
+  }
+}

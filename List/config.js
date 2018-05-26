@@ -1,0 +1,13 @@
+const COL_WIDTH_XS = 50
+
+const COL_WIDTH_S = 70
+
+const COL_WIDTH_M = 110
+
+const COL_WIDTH_L = 142
+
+const COL_WIDTH_XL = 210
+
+export {
+  COL_WIDTH_XS, COL_WIDTH_S, COL_WIDTH_M, COL_WIDTH_L, COL_WIDTH_XL,
+}

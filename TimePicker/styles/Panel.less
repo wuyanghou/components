@@ -1,0 +1,31 @@
+:global {
+  .@{prefixClass}-panel {
+    z-index: 1070;
+    width: 170px;
+    position: absolute;
+    box-sizing: border-box;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    &-inner {
+      position: relative;
+      outline: none;
+      list-style: none;
+      font-size: 12px;
+      text-align: left;
+      line-height: 1.5;
+      width: 120px;
+    }
+
+    &-narrow {
+      max-width: 113px;
+    }
+  }
+
+
+  .@{prefixClass}-panel-combobox {
+    width: 100%;
+  }
+}

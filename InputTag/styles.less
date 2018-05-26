@@ -1,0 +1,102 @@
+:global {
+  .InputTag {
+    display: flex;
+    :global {
+      .IconButton {
+        top: 11px;
+      }
+    }
+
+    .InputTag-main {
+      border: 1px solid @inputBorderColor;
+      border-radius: @borderRadius;
+      height: @inputHeight;
+      line-height: @inputHeight - 2px;
+      background: #fff;
+      display: flex;
+    }
+
+    .InputTag-close-icon {
+      margin-left: 10px;
+      position: relative;
+    }
+
+    &.InputTag-small {
+      .InputTag-main {
+        height: @inputHeightSm;
+        line-height: @inputHeightSm - 2px;
+        font-size: @fontSizeSm;
+        .ant-input,
+        .ant-input-number,
+        .ant-input-number input{
+          height: @inputHeightSm - 2px;
+          font-size: @fontSizeSm;
+        }
+        .InputTag-label:before {
+          top: 7px;
+          height: @fontSizeSm;
+        }
+      }
+      .IconButton {
+        top: 7px;
+      }
+    }
+
+    &.InputTag-xSmall {
+      .InputTag-main {
+        height: @inputHeightXs;
+        line-height: 22px;
+        font-size: @fontSizeSm;
+        .ant-input,
+        .ant-input-number,
+        .ant-input-number input {
+          height: 22px;
+          font-size: @fontSizeSm;
+        }
+        .InputTag-label:before {
+          top: 5px;
+          height: @fontSizeSm;
+        }
+      }
+      .IconButton {
+        top: 5px;
+      }
+    }
+  }
+
+  .InputTag-label {
+    position: relative;
+    padding: 0 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1px;
+      top: 11px;
+      height: @fontSize;
+      background: @inputBorderColor;
+    }
+  }
+
+  .InputTag-input {
+    flex: 1;
+    .ant-input,
+    .ant-input-number {
+      border: none;
+      display: block;
+      background: transparent;
+      height: @inputHeight - 2px;
+    }
+    .ant-input-number-input {
+      background: transparent;
+    }
+  }
+
+  .InputTag-flexInput {
+
+    .InputTag-main {
+      flex: 1;
+    }
+  }
+}

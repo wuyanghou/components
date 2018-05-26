@@ -1,0 +1,84 @@
+:global {
+  .Tabs-navbar-center {
+    text-align: center;
+  }
+  .Tabs-navbar-right {
+    text-align: right;
+  }
+  .Tab-btn {
+    display: inline-block;
+    cursor: pointer;
+    &.Tab-btn-active {
+      cursor: default;
+    }
+  }
+  .Tab-panel {
+    padding: 20px 0;
+    display: none;
+  }
+  .Tab-panel-active {
+    display: block;
+  }
+  .Tabs-default > .Tabs-navbar {
+    .Tab-btn {
+      position: relative;
+      color: @fontColorSecondary;
+      line-height: 44px;
+    }
+    .Tab-btn:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      border-radius: 3px;
+    }
+    .Tab-btn + .Tab-btn {
+      margin-left: 40px;
+    }
+    .Tab-btn-active {
+      color: @fontColorPrimary;
+    }
+    .Tab-btn-active:after {
+      background: @primaryColor;
+    }
+  }
+  .Tabs-button > .Tabs-navbar {
+    .Tab-btn {
+      position: relative;
+      background: @basicColorActive;
+      color: @fontColorSecondary;
+      line-height: 36px;
+      padding: 0 15px;
+      &:first-child {
+        border-top-left-radius: @borderRadius;
+        border-bottom-left-radius: @borderRadius;
+      }
+      &:last-child {
+        border-top-right-radius: @borderRadius;
+        border-bottom-right-radius: @borderRadius;
+      }
+    }
+    .Tab-btn + .Tab-btn:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 1px;
+      top: 8px;
+      height: 20px;
+      background: @basicColorBorder;
+    }
+    .Tab-btn-active {
+      background: #fff;
+      color: @fontColorPrimary;
+      box-shadow: @shadowPopup;
+      &.Tab-btn:before {
+        background: transparent;
+      }
+    }
+    .Tab-btn-active + .Tab-btn:before {
+      background: transparent;
+    }
+  }
+}

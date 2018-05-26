@@ -1,0 +1,41 @@
+
+:global [data-reactroot] {
+  .ant-tag {
+    line-height: @inputHeight;
+    height: @inputHeight;
+    border-radius: @borderRadiusSm;
+    cursor: default;
+    border-color: transparent;
+  }
+
+  .ant-tag-text {
+    position: relative;
+    top: -1px;
+  }
+
+  .ant-tag .anticon-cross {
+    margin-left: 10px;
+    margin-right: -2px;
+    color: @primaryColor;
+    opacity: 1;
+  }
+
+  .ant-tag:hover {
+    opacity: 1;
+  }
+
+  .ant-tag-has-color,
+  .ant-tag-has-color a,
+  .ant-tag-has-color a:hover,
+  .ant-tag-has-color .anticon-cross,
+  .ant-tag-has-color .anticon-cross:hover {
+    color: @fontColor;
+    &:before {
+      color: @primaryColor;
+    }
+  }
+  
+  .ant-tag, .ant-tag a, .ant-tag a:hover {
+    color: #aaa;
+  }
+}

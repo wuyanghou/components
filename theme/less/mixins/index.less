@@ -1,0 +1,87 @@
+.scrollbar() {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: @fontColorTips;
+    }
+    &::-webkit-scrollbar-thumb:hover,
+    &::-webkit-scrollbar-thumb:active{
+      background-color: @fontColor;
+    }
+  }
+}
+
+.scrollbar_sm() {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+    background-color: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: @fontColorTips;
+    }
+    &::-webkit-scrollbar-thumb:hover,
+    &::-webkit-scrollbar-thumb:active{
+      background-color: @fontColor;
+    }
+  }
+}
+
+.scrollbar_lg() {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: @fontColorTips;
+    }
+    &::-webkit-scrollbar-thumb:hover,
+    &::-webkit-scrollbar-thumb:active{
+      background-color: @fontColor;
+    }
+  }
+}
+
+.card_panel() {
+  border-radius: @borderRadiusLg;
+  border: 1px solid @basicColorBorder;
+  background: #fff;
+  padding: 5px 20px 20px;
+}

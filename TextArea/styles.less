@@ -1,0 +1,53 @@
+@import "../theme/less/mixins/index";
+:global {
+  .TextArea {
+    textarea {
+      position: relative;
+      display: block;
+      padding: 4px 10px;
+      width: 100%;
+      font-size: @fontSize;
+      line-height: 1.5;
+      color: @fontColor;
+      background-color: #fff;
+      border: 1px solid @inputBorderColor;
+      border-radius: 4px;
+      transition: all .3s;
+      background-image: none;
+      max-width: 100%;
+      resize: none;
+      .scrollbar_sm;
+    }
+    textarea:not([disabled]) {
+      &:focus, &:hover {
+        border-color: @primaryColor;
+      }
+      &:focus {
+        outline: 0;
+  /*       box-shadow: 0 0 0 2px rgba(109, 103, 255, 0.2); */
+      }
+    }
+    textarea[disabled] {
+      background-color: @basicColor;
+      opacity: 1;
+      cursor: not-allowed;
+      color: @fontColorTips;
+    }
+    &.TextArea-hasWordCount {
+      textarea {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  .TextArea-inner {
+    position: relative;
+  }
+  .TextArea-wordCount {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+  }
+}

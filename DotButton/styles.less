@@ -1,0 +1,76 @@
+:global {
+  .DotButton {
+    border: 1px solid @inputBorderColor;
+    color: @fontColor;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    .DotButton-text {
+      font-size: 12px;
+      width: 18px;
+      margin: -9px 0 0 -9px;
+    }
+    &.DotButton-lg {
+      .DotButton-text {
+        font-size: 14px;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        line-height: 22px;
+        margin: -11px 0 0 -11px;
+      }
+    }
+    .DotButton-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      &.Icon {
+        margin: -5px 0 0 -5px;
+      }
+    }
+    &:hover {
+      background: @basicColorActive;
+    }
+    &.DotButton-primary {
+      color: #fff;
+      background: @primaryColor;
+      border-color: transparent;
+      .Icon {
+        color: #fff;
+      }
+      &:hover {
+        background: @primaryColorActive;
+      }
+      &.DotButton-disabled {
+        background: @primaryColorDisabled;
+        color: #fff;
+        .Icon {
+          color: #fff;
+        }
+        &:hover {
+          background: @primaryColorDisabled;
+        }
+      }
+    }
+    &.DotButton-square {
+      border-radius: @borderRadius;
+      &.DotButton-radius-sm {
+        border-radius: @borderRadiusSm;
+      }
+    }
+    &.DotButton-disabled {
+      cursor: not-allowed;
+      color: @fontColorTips;
+      .Icon {
+        color: @fontColorTips;
+      }
+      &:hover {
+        background: #fff;
+      }
+    }
+
+  }
+}

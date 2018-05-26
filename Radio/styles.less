@@ -1,0 +1,49 @@
+:global {
+  .Radio {
+    display: inline-block;
+    &.Radio-small,
+    &.Radio-xSmall {
+      .ant-radio {
+        vertical-align: text-bottom;
+      }
+      .ant-radio-wrapper {
+        height: @inputHeightSm;
+        line-height: @inputHeightSm;
+        font-size: @fontSizeSm;
+      }
+    }
+    .ant-radio {
+      vertical-align: middle;
+    }
+    .ant-radio-wrapper {
+      height: 36px;
+      line-height: 36px;
+    }
+
+    .ant-radio-wrapper:hover {
+      .ant-radio-input:focus + .ant-checkbox-inner {
+        border-color: @primaryColor;
+      }
+      .ant-radio:not(.ant-radio-disabled) ~ span {
+        color: @primaryColor;
+      }
+    }
+
+    .ant-radio.ant-radio-checked ~ span {
+      color: @primaryColor;
+    }
+    .ant-radio.ant-radio-checked.ant-radio-disabled + span {
+      color: @primaryColorDisabled;
+    }
+    .ant-radio-disabled .ant-radio-inner {
+      border-color: @inputBorderColor !important;
+    }
+    .ant-radio-checked.ant-radio-disabled .ant-radio-inner {
+      &:after {
+        background: @primaryColorDisabled;
+      }
+      border-color: @primaryColorDisabled !important;
+    }
+  }
+
+}

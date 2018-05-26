@@ -1,0 +1,37 @@
+:global {
+  .Section {
+    border: 1px solid @basicColorBorder;
+    border-radius: @borderRadiusLg;
+    background: #fff;
+    position: relative;
+    &-header {
+      overflow: hidden;
+      height: 65px;
+      line-height: 65px;
+      padding: 0 20px;
+      margin: 5px 0 10px;
+    }
+    &-title {
+      color: @fontColorPrimary;
+      font-size: @fontSizeHeading;
+      float: left;
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 15px;
+        width: 8px;
+        height: 8px;
+        background: linear-gradient(180deg,rgba(182,181,251,1),rgba(104,102,255,1));
+        border-radius: 50%;
+        position: relative;
+        top: -2px;
+      }
+    }
+    &-toolBar {
+      float: right;
+    }
+    &-body {
+      padding: 0 20px;
+    }
+  }
+}

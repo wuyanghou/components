@@ -1,0 +1,305 @@
+
+:global {
+  /**
+   * 通用下拉菜单
+   */
+  .Dropdown {
+    background-color: white;
+    border: 1px solid @basicColorBorder;
+    box-shadow: @shadowDropdown;
+    border-radius: @borderRadius;
+    box-sizing: border-box;
+    z-index: 100;
+    left: -9999px;
+    top: -9999px;
+    position: absolute;
+    outline: none;
+  }
+
+  .Dropdown:empty,
+  .Dropdown-hidden {
+    display: none;
+  }
+
+  /**
+   * 多选下拉菜单
+   */
+  .MultiMenu-dropdown.Dropdown {
+
+    &.MultiMenu-dropdown-small {
+      font-size: @inputFontSizeSm;
+      .Dropdown-search-field {
+        height: @inputHeightSm;
+      }
+      .MultiMenu-dropdown-menu-item {
+        padding: 5px 18px 5px 10px;
+        &:after {
+          font-size: 12px;
+        }
+      }
+    }
+    &.MultiMenu-dropdown-xSmall {
+      font-size: @inputFontSizeXs;
+      .Dropdown-search-field {
+        height: @inputHeightXs;
+      }
+      .MultiMenu-dropdown-menu-item {
+        padding: 5px 18px 5px 10px;
+        &:after {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .MultiMenu-dropdown {
+    .Dropdown-search-field-wrap {
+      padding: 5px;
+    }
+
+    .Dropdown-search-field {
+      width: 100%;
+      height: @inputHeight;
+      border-radius: @borderRadius;
+      border: 1px solid @basicColorBorder;
+      padding: 0 10px;
+      outline: none;
+    }
+
+    .Dropdown-menu {
+      .scrollbar_sm;
+      max-height: 250px;
+      overflow: auto;
+      outline: none;
+
+      &-item {
+        margin: 0;
+        position: relative;
+        display: block;
+        color: @fontColor;
+        padding: 7px 22px 7px 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:after {
+          font-family: 'anticon';
+          content: "\E632";
+          color: transparent;
+          display: inline-block;
+          font-size: 14px;
+          transform: scale(0.83333333) rotate(0deg);
+          transition: all 0.2s ease;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 8px;
+          font-weight: bold;
+        }
+
+        &-disabled {
+          color: @fontColorTips;
+          cursor: not-allowed;
+        }
+
+        &-active {
+          background-color: @basicColorActive;
+          cursor: pointer;
+        }
+
+        &-selected {
+          color: @primaryColor;
+          background-color: @primaryColorBg;
+          &:after {
+            color: @primaryColor;
+          }
+          &.Dropdown-menu-item-disabled {
+            color: @primaryColorDisabled;
+            &:after {
+              color: @primaryColorDisabled;
+            }
+          }
+          &.Dropdown-menu-item-active {
+            background-color: @basicColorActive;
+          }
+        }
+
+        &-tips:after {
+          content: none;
+        }
+
+      }
+
+      &-item-group-list {
+
+        .Dropdown-menu-item {
+          padding-left: 20px;
+        }
+
+      }
+
+      &-item-group-title {
+        color: @fontColorSecondary;
+        padding: 7px 10px;
+        font-size: @fontSizeSm;
+      }
+    }
+  }
+
+  /**
+   * 单选下拉菜单
+   */
+   .SelectMenu-dropdown.Dropdown {
+
+    &.SelectMenu-dropdown-small {
+      font-size: @inputFontSizeSm;
+      .Dropdown-search-field {
+        height: @inputHeightSm;
+      }
+      .SelectMenu-dropdown-menu-item {
+        padding: 5px 18px 5px 10px;
+        &:after {
+          font-size: 12px;
+        }
+      }
+    }
+    &.SelectMenu-dropdown-xSmall {
+      font-size: @inputFontSizeXs;
+      .Dropdown-search-field {
+        height: @inputHeightXs;
+      }
+      .SelectMenu-dropdown-menu-item {
+        padding: 5px 18px 5px 10px;
+        &:after {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .SelectMenu-dropdown {
+    .Dropdown-search-field-wrap {
+      padding: 5px;
+    }
+
+    .Dropdown-search-field {
+      width: 100%;
+      height: @inputHeight;
+      border-radius: @borderRadius;
+      border: 1px solid @basicColorBorder;
+      padding: 0 10px;
+      outline: none;
+    }
+
+    .Dropdown-menu {
+      .scrollbar_sm;
+      max-height: 250px;
+      overflow: auto;
+      outline: none;
+
+      &-item {
+        margin: 0;
+        position: relative;
+        display: block;
+        color: @fontColor;
+        padding: 7px 22px 7px 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+
+        &-disabled {
+          color: @fontColorTips;
+          cursor: not-allowed;
+        }
+
+        &-active {
+          background-color: @basicColorActive;
+          cursor: pointer;
+        }
+
+        &-selected {
+          color: @primaryColor;
+          background-color: @primaryColorBg;
+          &.Dropdown-menu-item-disabled {
+            color: @primaryColorDisabled;
+            &:after {
+              color: @primaryColorDisabled;
+            }
+          }
+          &.Dropdown-menu-item-active {
+            background-color: @basicColorActive;
+          }
+        }
+      }
+
+      &-item-group-list {
+
+        .Dropdown-menu-item {
+          padding-left: 20px;
+        }
+
+      }
+
+      &-item-group-title {
+        color: @fontColorSecondary;
+        padding: 7px 10px;
+        font-size: @fontSizeSm;
+      }
+    }
+  }
+
+  /**
+   * 通用下拉菜单动画效果
+   */
+  .Dropdown-slide-up-effect() {
+    animation-duration: .15s;
+    animation-fill-mode: both;
+    transform-origin: 0 0;
+  }
+  .Dropdown-slide-up-enter,
+  .Dropdown-slide-up-appear {
+    .Dropdown-slide-up-effect();
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+    animation-play-state: paused;
+  }
+
+  .Dropdown-slide-up-leave {
+    .Dropdown-slide-up-effect();
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+    animation-play-state: paused;
+  }
+
+  .Dropdown-placement-bottomLeft, .Dropdown-placement-bottomRight {
+
+    &.Dropdown-slide-up-enter.Dropdown-slide-up-enter-active,
+    &.Dropdown-slide-up-appear.Dropdown-slide-up-appear-active {
+      animation-name: SelectDropdownSlideUpIn;
+      animation-play-state: running;
+    }
+    &.Dropdown-slide-up-leave.Dropdown-slide-up-leave-active {
+      animation-name: SelectDropdownSlideUpOut;
+      animation-play-state: running;
+    }
+
+  }
+
+  .Dropdown-placement-topLeft, .Dropdown-placement-topRight {
+
+    &.Dropdown-slide-up-enter.Dropdown-slide-up-enter-active,
+    &.Dropdown-slide-up-appear.Dropdown-slide-up-appear-active {
+      animation-name: SelectDropdownSlideDownIn;
+      animation-play-state: running;
+    }
+
+    &.Dropdown-slide-up-leave.Dropdown-slide-up-leave-active {
+      animation-name: SelectDropdownSlideDownOut;
+      animation-play-state: running;
+    }
+
+  }
+
+
+}

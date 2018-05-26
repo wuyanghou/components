@@ -1,0 +1,90 @@
+@import "../theme/less/mixins/index";
+
+:global {
+
+  .DropdownMenu {
+    cursor: pointer;
+    .DropdownMenu-content,
+    .DropdownMenu-arrow {
+      color: @primaryColor;
+      svg {
+        color: @primaryColor;
+      }
+    }
+    .DropdownMenu-content {
+      font-size: @fontSize;
+    }
+    &.DropdownMenu-disabled {
+      .DropdownMenu-content,
+      .DropdownMenu-arrow {
+        color: @primaryColorDisabled;
+        cursor: not-allowed;
+        svg {
+          color: @primaryColorDisabled;
+        }
+      }
+    }
+  }
+
+  .DropdownMenu-small {
+    .DropdownMenu-content {
+      font-size: @fontSizeSm;
+    }
+  }
+
+  .DropdownMenu-arrow {
+    display: inline-block;
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    margin-left: 5px;
+    transform: scale(.85);
+    transition: transform .2s ease;
+    transform-origin: center center;
+  }
+
+  .DropdownMenu-small .DropdownMenu-arrow {
+    position: relative;
+    top: 1px;
+  }
+
+  .DropdownMenu-arrow:before {
+    content: '\E61D';
+    font-family: "anticon" !important;
+  }
+
+  .DropdownMenu-arrow.DropdownMenu-arrow-up {
+    transform: rotate(-180deg) scale(.85);
+  }
+
+  .DropdownMenu-menu-wrap {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: @shadowDropdown;
+    .scrollbar_sm;
+    .ant-dropdown-menu {
+      padding: 6px 0;
+    }
+    .ant-menu-inline, .ant-menu-vertical {
+      border-right: none;
+    }
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: @inputHeight;
+      line-height: @inputHeight;
+      padding: 0 20px;
+    }
+  }
+
+  .DropdownMenu-menu-small {
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      font-size: @fontSizeSm;
+    }
+
+  }
+
+}

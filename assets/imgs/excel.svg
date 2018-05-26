@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>excel</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0.12" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="103.868151%" y1="17.578125%" x2="-3.31494097%" y2="91.796875%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.4" offset="45.3398518%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="跟进回访3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-448.000000, -1079.000000)">
+        <g id="Group-13" transform="translate(270.000000, 283.000000)">
+            <g id="Group-11-Copy" transform="translate(0.000000, 309.000000)">
+                <g id="Group-20" transform="translate(94.000000, 358.000000)">
+                    <g id="excel" transform="translate(84.000000, 129.000000)">
+                        <g>
+                            <rect id="Rectangle-11" fill="#3CD664" x="0" y="0" width="38" height="38" rx="4"></rect>
+                            <g id="Group-14" transform="translate(10.000000, 11.000000)">
+                                <polygon id="Rectangle-12" fill="url(#linearGradient-1)" points="0 0 6.1875 0 9 3.9375 12.0625 0 18 0 18 16 0 16"></polygon>
+                                <polygon id="w" fill="url(#linearGradient-2)" points="17.9686279 0 12.0354167 0 0 16 6.03541667 16"></polygon>
+                                <polygon id="w" fill="#FFFFFF" points="6.075 0 0 0 11.9375 16 18.03125 16"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

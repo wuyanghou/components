@@ -1,0 +1,46 @@
+:global {
+  .Validator-tips {
+    font-size: @fontSizeSm;
+    display: none;
+  }
+  .Validator-keepHeight {
+    position: relative;
+    .Validator-tips {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+  .Validator-showTips {
+    .Validator-tips {
+      color: @highlightColor;
+      line-height: 1.5;
+      display: block;
+    }
+  }
+  .Validator-showStatus {
+    .ant-input,
+    .ant-input:hover,
+    .ant-input-number,
+    .ant-input-number:hover,
+    .ant-select-selection,
+    .ant-select-selection:hover,
+    .MultiSelect,
+    .MultiSelect:hover,
+    .MultiSelect:focus,
+    .DatePicker,
+    .DatePicker:hover,
+    .DatePicker:focus ,
+    .MonthPicker,
+    .MonthPicker:hover,
+    .MonthPicker:focus ,
+    .TimePicker,
+    .TimePicker:hover,
+    .TimePicker:focus,
+    .InputTag .InputTag-main,
+    .TextArea textarea,
+    .TextArea textarea:not(disabled):hover {
+      border-color: @highlightColor;
+    }
+  }
+}

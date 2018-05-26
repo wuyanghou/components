@@ -1,0 +1,67 @@
+@import "../theme/less/mixins/index";
+:global .List{
+
+  max-height: 100%;
+
+  .ant-table-wrapper,
+  .ant-spin-nested-loading,
+  .ant-spin-container,
+  .ant-table-fixed-header,
+  .ant-table-content,
+  .ant-table-scroll {
+    height: 100%;
+  }
+  &.List-hasPagination {
+    .ant-table-fixed-header {
+      height: calc(~'100% - 60px');
+    }
+  }
+  .ant-table-fixed-header .ant-table-scroll .ant-table-header {
+    margin-bottom: 0 !important;
+    overflow-x: hidden;
+    //background: transparent;
+  }
+  .ant-table-fixed-header .ant-table-body {
+    max-height: calc(~'100% - 48px') !important;
+    overflow-x: scroll !important;
+    // overflow-y: auto !important;
+  }
+  .ant-table-fixed-left,
+  .ant-table-fixed-right {
+    height: calc(~'100% - 6px');
+    z-index: 2;
+  }
+  .ant-table-fixed-left .ant-table-body-outer,
+  .ant-table-fixed-right .ant-table-body-outer {
+    height: calc(~'100% - 48px');
+  }
+  .ant-table-fixed-left .ant-table-body-inner,
+  .ant-table-fixed-right .ant-table-body-inner {
+    overflow-x: hidden;
+  }
+  .ant-table-fixed-left .ant-table-body-inner {
+    margin-right: -6px;
+  }
+  .ant-table-fixed-left .ant-table-fixed,
+  .ant-table-fixed-right .ant-table-fixed {
+    width: 100%;
+  }
+  .ant-table-fixed-header .ant-table-scroll .ant-table-header,
+  .ant-table-fixed-header .ant-table-body,
+  .ant-table-fixed-header .ant-table-body-inner {
+    .scrollbar;
+  }
+
+  .ant-table-tbody > tr.ant-table-row-empty-placeholder > td {
+    border-color: transparent;
+  }
+
+  .ant-table-thead > tr, .ant-table-tbody > tr {
+    transition: none;
+  }
+
+  .List-moneyTitle {
+    text-align: right;
+  }
+
+}

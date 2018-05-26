@@ -1,0 +1,32 @@
+:global {
+
+  .Tag {
+    font-size: @fontSize;
+    &.Tag-font-white {
+      &.ant-tag-has-color,
+      &.ant-tag-has-color a,
+      &.ant-tag-has-color a:hover,
+      &.ant-tag-has-color .anticon-cross,
+      &.ant-tag-has-color .anticon-cross:hover {
+        color: #fff;
+        &:before {
+          color: @primaryColor;
+        }
+      }
+    }
+
+    &.Tag-small {
+      line-height: @inputHeightSm;
+      height: @inputHeightSm;
+      font-size: @fontSizeSm;
+    }
+
+    &.Tag-xSmall {
+      line-height: @inputHeightXs;
+      height: @inputHeightXs;
+      font-size: @fontSizeSm;
+    }
+
+  }
+
+}

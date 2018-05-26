@@ -1,0 +1,42 @@
+:global {
+  .SubBlock-default {
+    margin-left: 22px;
+    margin-right: 22px;
+
+    .SubBlock-header {
+      padding: 15px 0;
+      overflow: hidden;
+    }
+    .SubBlock-title {
+      font-size: @fontSize;
+      color: @fontColorPrimary;
+      float: left;
+    }
+    .SubBlock-toolBar {
+      float: right;
+    }
+    .SubBlock-content {
+      font-size: 14px;
+    }
+  }
+
+  .SubBlock-default + .SubBlock-default {
+    margin-top: 10px;
+  }
+
+  .SubBlock-dark {
+    margin: 10px;
+
+    .SubBlock-title {
+      padding: 10px 0;
+      font-size: @fontSize;
+      color: @fontColorPrimary;
+    }
+
+    .SubBlock-content {
+      padding: 20px;
+      background: @basicColor;
+    }
+  }
+
+}

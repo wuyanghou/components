@@ -1,0 +1,39 @@
+
+:global [data-reactroot] {
+
+  .ant-input-number {
+    &-input {
+      padding: 0 10px;
+    }
+    &-handler {
+      &:hover,
+      &:active {
+        background: @basicColorActive;
+      }
+    }
+    &-handler-up {
+      border-top-right-radius: @borderRadius;
+    }
+
+    &-handler-down {
+      border-bottom-right-radius: @borderRadius;
+    }
+
+    .ant-input-number-handler-down-inner:before {
+      content: "\e901";
+    }
+
+    .ant-input-number-handler-up-inner:before {
+      content: "\e900";
+    }
+    .ant-input-number-handler-down-inner:before,
+    .ant-input-number-handler-up-inner:before {
+      font-family: iconfont!important;
+    }
+    .ant-input-number-handler:hover .ant-input-number-handler-down-inner,
+    .ant-input-number-handler:hover .ant-input-number-handler-up-inner {
+      color: @fontColorSecondary;
+    }
+  }
+
+}

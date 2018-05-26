@@ -1,0 +1,48 @@
+:global {
+
+  .Popover-content {
+    padding: 10px 5px 10px;
+    font-size: @fontSizeSm;
+    position: relative;
+    &.Popover-content-hasIcon {
+      padding-top: 20px;
+    }
+  }
+
+  .Popover-icon-wrap {
+    position: absolute;
+    top: -28px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    left: 50%;
+    margin-left: -18px;
+    background: #fff;
+    box-shadow: @shadowPopup;
+  }
+
+  .Popover-icon {
+    font-size: 24px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: 24px;
+    line-height: 24px;
+  }
+
+  .Popover-icon-wrap:before {
+    content: '';
+    background: #fff;
+    width: 44px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: -4px;
+  }
+
+  .Popover-footer {
+    text-align: right;
+    margin-top: 10px;
+  }
+}
+

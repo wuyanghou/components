@@ -1,0 +1,46 @@
+:global {
+  .Block-default {
+    margin: 10px;
+
+    .Block-header {
+      padding: 20px 0;
+      overflow: hidden;
+    }
+    .Block-title {
+      font-size: @fontSizeHeading;
+      color: @fontColorPrimary;
+      float: left;
+    }
+
+    .Block-title:before {
+      content: '';
+      background-image: linear-gradient(-180deg, #B9B6FF 3%, #8F8BFF 56%, #8F8BFF 56%, #8F8BFF 56%, #8F8BFF 56%, #6D67FF 100%);
+      height: 13px;
+      width: 3px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .Block-toolBar {
+      float: right;
+    }
+    .Block-content {
+      font-size: 14px;
+    }
+  }
+
+  .Block-dark {
+    margin: 10px;
+
+    .Block-title {
+      padding: 10px 0;
+      font-size: @fontSizeHeading;
+      color: @fontColorPrimary;
+    }
+
+    .Block-content {
+      padding: 20px;
+      background: @basicColor;
+    }
+  }
+
+}

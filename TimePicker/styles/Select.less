@@ -1,0 +1,76 @@
+@import "../../theme/less/mixins/index";
+
+:global {
+  .@{prefixClass}-panel-select {
+    float: left;
+    font-size: 12px;
+    border-width: 0 1px;
+    box-sizing: border-box;
+    width: 50%;
+    max-height: 250px;
+    position: relative; // Fix chrome weird render bug
+    .scrollbar_sm;
+    &::-webkit-scrollbar-track-piece{
+      background-color: @basicColorActive;
+    }
+    overflow-y: hidden;
+    &:hover {
+      overflow-y: auto;
+    }
+
+    &-active {
+      overflow-y: auto;
+    }
+
+    &:first-child {
+      border-left: 0;
+      margin-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    ul {
+      list-style: none;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    li {
+      list-style: none;
+      box-sizing: content-box;
+      margin: 0;
+      height: @inputHeight;
+      line-height: @inputHeight;
+      padding-left: 22px;
+      cursor: pointer;
+      user-select: none;
+      font-size: @fontSizeSm;
+
+      &:hover {
+        background: @basicColor;
+      }
+
+      &.@{prefixClass}-panel-select-option-selected {
+        background: @primaryColorBg;
+        color: @primaryColor;
+        font-size: @fontSizeHeadingSm;
+      }
+
+      &.@{prefixClass}-panel-select-option-disabled {
+        color: @fontColorTips;
+        &:hover {
+          background: transparent;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .@{prefixClass}-panel-select + .@{prefixClass}-panel-select ul {
+    border-left: 1px solid @basicColorBorder;
+  }
+}

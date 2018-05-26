@@ -1,0 +1,80 @@
+
+:global [data-reactroot] {
+  .ant-pagination {
+    display: table;
+    font-size: @fontSizeSm;
+    margin: 16px 0;
+    float: right;
+
+    .ant-pagination-total-text {
+      float: right;
+      margin: 0 0 0 30px;
+    }
+
+    .ant-pagination-item a {
+      text-decoration: none;
+    }
+
+    .ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    .ant-pagination-prev:hover .ant-pagination-item-link,
+    .ant-pagination-next:hover .ant-pagination-item-link,
+    .ant-pagination-prev:focus:hover .ant-pagination-item-link,
+    .ant-pagination-next:focus:hover .ant-pagination-item-link {
+      border-color: @inputBorderColor;
+      background-color: @basicColorActive;
+      color: @fontColor;
+    }
+
+    .ant-pagination-next:focus .ant-pagination-item-link,
+    .ant-pagination-prev:focus .ant-pagination-item-link {
+      border-color: @inputBorderColor;
+      background-color: #fff;
+      color: @fontColor;
+    }
+
+    .ant-pagination-item:not(.ant-pagination-item-active):hover {
+      border-color: @inputBorderColor;
+      background-color: @basicColorActive;
+      color: @fontColor;
+    }
+    .ant-pagination-item:not(.ant-pagination-item-active):hover a {
+      color: @fontColor;
+    }
+
+    .ant-pagination-options-quick-jumper input {
+      font-size: @fontSizeSm;
+    }
+
+    .ant-select {
+      width: 100px;
+    }
+
+    .ant-pagination-next.ant-pagination-disabled,
+    .ant-pagination-next.ant-pagination-disabled:hover,
+    .ant-pagination-next.ant-pagination-disabled:focus,
+    .ant-pagination-prev.ant-pagination-disabled,
+    .ant-pagination-prev.ant-pagination-disabled:hover,
+    .ant-pagination-prev.ant-pagination-disabled:focus {
+      .ant-pagination-item-link {
+        background-color: #fff;
+        color: @fontColorTips;
+      }
+    }
+
+    .ant-pagination-next .ant-pagination-item-link:after,
+    .ant-pagination-prev .ant-pagination-item-link:after {
+      font-family: iconfont;
+    }
+
+    .ant-pagination-next .ant-pagination-item-link:after {
+      content: "\e902";
+    }
+    .ant-pagination-prev .ant-pagination-item-link:after {
+      content: "\e903";
+    }
+  }
+}
